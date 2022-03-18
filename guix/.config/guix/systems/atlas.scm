@@ -9,18 +9,16 @@
  (swap-devices
   (list (swap-space
          (target
-          (uuid "d51d2064-elf2-49c7-af8e-a56bcdcdf348")))))
+          (uuid "ea40b994-e20f-421c-be3b-c34053a32fb1")))))
  (file-systems
   (cons* (file-system
           (mount-point "/boot/efi")
-          (device
-           (uuid "abdd2940-5c77-4624-9849-384063f71e89"
-                 'ext4))
-          (type "ext4"))
+          (device (uuid "9DEA-F42D" 'fat32))
+          (type "vfat"))
          (file-system
-          (mount-point "/home")
+          (mount-point "/")
           (device
-           (uuid "1e651bca-1fa8-42dc-90d4-e6440a9159e6"
+           (uuid "8833dc17-20b4-4c2c-a5af-ad5747b0fab1"
                  'ext4))
           (type "ext4"))
          %base-file-systems)))
