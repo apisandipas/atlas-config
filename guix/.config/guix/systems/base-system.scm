@@ -151,10 +151,10 @@ EndSection
 
     ;; Use the "desktop" services, which include the X11 log-in service,
     ;; networking with NetworkManager, and more
-    (services (append (cons*   (service tlp-service-type
-                             (tlp-configuration
-                                (cpu-boost-on-ac? #t)
-                                (wifi-pwr-on-bat? #t)))
+    (services (cons* (service tlp-service-type
+                              (tlp-configuration
+                               (cpu-boost-on-ac? #t)
+                               (wifi-pwr-on-bat? #t)))
                     (pam-limits-service ;; This enables JACK to enter realtime mode
                      (list
                       (pam-limits-entry "@realtime" 'both 'rtprio 99)
@@ -174,7 +174,7 @@ EndSection
                                  (list cups-filters))))
                     (service nix-service-type)
                     (bluetooth-service #:auto-enable? #t)
-                       %my-desktop-services)))
+                       %my-desktop-services))
 
     ;; Allow resolution of '.local' host names with mDNS
     (name-service-switch %mdns-host-lookup-nss)))
