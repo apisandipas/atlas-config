@@ -151,7 +151,7 @@ EndSection
 
     ;; Use the "desktop" services, which include the X11 log-in service,
     ;; networking with NetworkManager, and more
-    (services (cons*   (service tlp-service-type
+    (services (append (cons*   (service tlp-service-type
                              (tlp-configuration
                                 (cpu-boost-on-ac? #t)
                                 (wifi-pwr-on-bat? #t)))
@@ -174,7 +174,7 @@ EndSection
                                  (list cups-filters))))
                     (service nix-service-type)
                     (bluetooth-service #:auto-enable? #t)
-                       %my-desktop-services))
+                       %my-desktop-services)))
 
     ;; Allow resolution of '.local' host names with mDNS
     (name-service-switch %mdns-host-lookup-nss)))
