@@ -4,15 +4,27 @@
 
 This is my dotfiles for my Lisp-hacking machine. Based on the GNU Guix Linux Distribution / Package Manager.
 
-|------------------+-----------+--------------|
-| Need:            | Solution: | Language:    |
-|------------------+-----------+--------------|
-| OS               | GNU Guix  | Guile Scheme |
-| Package Mgmt     | GNU Guix  | Guile Scheme |
-| Window Manager   | EXWM      | Emacs Lisp   |
-| Window Manager 2 | StumpWM   | Common Lisp  |
-| Text Editor      | Emacs     | Emacs Lisp   |
-| Web Browser      | Nyxt      | Common Lisp  |
-|------------------+-----------+--------------|
-| Config Mgmt      | GNU Stow  | n/a          |
-|                  |           |              |
+|-------------------+-----------+--------------|
+| Need:             | Solution: | Language:    |
+|-------------------+-----------+--------------|
+| OS                | GNU Guix  | Guile Scheme |
+| Package Mgmt      | GNU Guix  | Guile Scheme |
+| Window Manager    | EXWM      | Emacs Lisp   |
+| Window Manager 2  | StumpWM   | Common Lisp  |
+| Window Manager 3  | bspwm     | Bash / ipc   |
+| Text Editor       | Emacs     | Emacs Lisp   |
+| Web Browser       | Nyxt      | Common Lisp  |
+|-------------------+-----------+--------------|
+| Config Mgmt       | GNU Stow  | -            |
+| Terminal Emulator | Kitty     | -            |
+| Compositor        | picom     | -            |
+| Top Panel         | polybar   | -            |
+| App Launcher      | rofi      | -            |
+| Hot Key Daemon    | sxhkd     | -            |
+|-------------------+-----------+--------------|
+|                   |           |              |
+
+* Outstanding Tasks
+- install =chemacs= - for multiple emacs configurations
+- install =starship= - for configurable zsh prompt
+- install =zoxide= - for zsh-jump-around functionality
