@@ -30,3 +30,10 @@ This is my dotfiles for my Lisp-hacking machine. Based on the GNU Guix Linux Dis
 - install =starship= - for configurable zsh prompt
 - install =zoxide= - for zsh-jump-around functionality
 - *Literate Configurations* - where is makes sense
+
+
+* Guix TODOs
+- Copy system configuration to .config/guix/systems/
+    - Configure =bspwm=, =sxhkd=, =i3= in system config
+- Generate Guix Home configuration
+- Add Profile mgmt scripts to .bin
