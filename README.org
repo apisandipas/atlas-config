@@ -1,0 +1,18 @@
+* atlas-config
+
+>>> All real Guix speak with a Lisp. <<<
+
+This is my dotfiles for my Lisp-hacking machine. Based on the GNU Guix Linux Distribution / Package Manager.
+
+|------------------+-----------+--------------|
+| Need:            | Solution: | Language:    |
+|------------------+-----------+--------------|
+| OS               | GNU Guix  | Guile Scheme |
+| Package Mgmt     | GNU Guix  | Guile Scheme |
+| Window Manager   | EXWM      | Emacs Lisp   |
+| Window Manager 2 | StumpWM   | Common Lisp  |
+| Text Editor      | Emacs     | Emacs Lisp   |
+| Web Browser      | Nyxt      | Common Lisp  |
+|------------------+-----------+--------------|
+| Config Mgmt      | GNU Stow  | n/a          |
+|                  |           |              |
