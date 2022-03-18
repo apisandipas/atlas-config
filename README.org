@@ -21,6 +21,7 @@ This is my dotfiles for my Lisp-hacking machine. Based on the GNU Guix Linux Dis
 | Top Panel         | polybar   | -            |
 | App Launcher      | rofi      | -            |
 | Hot Key Daemon    | sxhkd     | -            |
+| Wallpaper Setter  | feh       |              |
 |-------------------+-----------+--------------|
 |                   |           |              |
 
@@ -28,3 +29,4 @@ This is my dotfiles for my Lisp-hacking machine. Based on the GNU Guix Linux Dis
 - install =chemacs= - for multiple emacs configurations
 - install =starship= - for configurable zsh prompt
 - install =zoxide= - for zsh-jump-around functionality
+- *Literate Configurations* - where is makes sense
