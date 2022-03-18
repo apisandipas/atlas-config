@@ -1,0 +1,12 @@
+\.git
+\.gitignore
+
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# Ignore custom zsh files
+./zsh/zsh

@@ -1,0 +1,29 @@
+[init]
+  defaultBranch = main
+[user]
+	email = bryan@cablecar.digtal
+	name = Bryan Paronto
+	signingKey = null
+[push]
+	default = simple
+[core]
+	excludesfile = /home/bryan/.gitignore
+[http]
+	sslVerify = false
+[alias]
+	assume = update-index --assume-unchanged
+	unassume = update-index --no-assume-unchanged
+	assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+[pull]
+	rebase = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[gpg]
+	program = null
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
