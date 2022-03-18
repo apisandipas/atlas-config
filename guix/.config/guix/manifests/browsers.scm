@@ -2,4 +2,11 @@
 ;; need to install their updates when unnecessary.
 
 (specifications->manifest
- '("ungoogled-chromium"))
+ '(
+   ;; TODO: Add qutebrowser config
+   "qutebrowser"
+   ;; TODO: add Nyxt config
+   "nyxt"
+   "firefox"
+   "ungoogled-chromium"
+   ))
