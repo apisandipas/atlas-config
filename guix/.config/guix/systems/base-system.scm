@@ -16,7 +16,6 @@
   #:use-module (gnu packages emacs)
   #:use-module (gnu packages file-systems)
   #:use-module (gnu packages gnome)
-  #:use-module (gnu packages qutebrowser)
   #:use-module (gnu packages mtools)
   #:use-module (gnu packages linux)
   #:use-module (gnu packages audio)
