@@ -1,5 +1,6 @@
 # Augment PATH
 export PATH="$HOME/.bin:$PATH"
+export GIT_SSH_COMMAND="ssh -i /home/bryan/.ssh/id_rsa"
 
 # Load the default Guix profile
 GUIX_PROFILE="$HOME/.guix-profile"

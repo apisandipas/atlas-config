@@ -28,6 +28,7 @@
   #:use-module (nongnu system linux-initrd))
 
 (use-service-modules nix)
+(use-service-modules ssh)
 (use-service-modules desktop xorg)
 (use-package-modules certs)
 (use-package-modules shells)
@@ -154,6 +155,7 @@ EndSection
     ;; Use the "desktop" services, which include the X11 log-in service,
     ;; networking with NetworkManager, and more
     (services (cons* (service mate-desktop-service-type)
+	       (service openssh-service-type)
                (service tlp-service-type
                         (tlp-configuration
                          (cpu-boost-on-ac? #t)
