@@ -8,7 +8,10 @@
 #██    ███████████████ ████ ██████████  ░░██████
 #░░    ░░░░░░░░░░░░░░░ ░░░░ ░░░░░░░░░░    ░░░░░░
 
-export DOTS_DIR=$HOME/.dotfiles
+
+source ~/.profile
+
+export DOTS_DIR=~/.dotfiles
 
 source $DOTS_DIR/zsh/lib/utils.zsh
 source $DOTS_DIR/zsh/lib/functions.zsh

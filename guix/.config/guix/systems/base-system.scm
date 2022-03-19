@@ -112,6 +112,7 @@ EndSection
                   (comment "Bryan Paronto")
                   (group "users")
                   (home-directory "/home/bryan")
+		  (shell (file-append zsh "/bin/zsh")) 
                   (supplementary-groups '(
                                           "wheel"     ;; sudo
                                           "netdev"    ;; network devices

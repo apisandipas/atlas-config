@@ -9,7 +9,7 @@
 ^/COPYING
 
 # Ignore custom zsh files
-./zsh/lib
+zsh/lib
 
 # Ignore wallpaper files
 wallpaper
