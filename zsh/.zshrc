@@ -10,12 +10,12 @@
 
 export DOTS_DIR=$HOME/.dotfiles
 
-source $DOTS_DIR/zsh/.config/lib/utils.zsh
-source $DOTS_DIR/zsh/.config/lib/functions.zsh
-source $DOTS_DIR/zsh/.config/lib/globals.zsh
-source $DOTS_DIR/zsh/.config/lib/globals.zsh
-source $DOTS_DIR/zsh/.config/lib/keybinds.zsh
-source $DOTS_DIR/zsh/.config/lib/aliases.zsh
+source $DOTS_DIR/zsh/lib/utils.zsh
+source $DOTS_DIR/zsh/lib/functions.zsh
+source $DOTS_DIR/zsh/lib/globals.zsh
+source $DOTS_DIR/zsh/lib/globals.zsh
+source $DOTS_DIR/zsh/lib/keybinds.zsh
+source $DOTS_DIR/zsh/lib/aliases.zsh
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
@@ -44,6 +44,7 @@ setopt share_history          # share command history data
 # load z-jump script
 #eval "$(zoxide init zsh)"
 
-colorscript -r
+colortest
+# colorscript -r
 
 export PATH="$HOME/.bin/:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
