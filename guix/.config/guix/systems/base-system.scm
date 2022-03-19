@@ -152,30 +152,31 @@ EndSection
 
     ;; Use the "desktop" services, which include the X11 log-in service,
     ;; networking with NetworkManager, and more
-    (services (cons* (service tlp-service-type
-                              (tlp-configuration
-                               (cpu-boost-on-ac? #t)
-                               (wifi-pwr-on-bat? #t)))
-                    (pam-limits-service ;; This enables JACK to enter realtime mode
-                     (list
-                      (pam-limits-entry "@realtime" 'both 'rtprio 99)
-                      (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
-                    (extra-special-file "/usr/bin/env"
-                      (file-append coreutils "/bin/env"))
-                    (service thermald-service-type)
-                    (service docker-service-type)
-                    (service libvirt-service-type
-                             (libvirt-configuration
-                              (unix-sock-group "libvirt")
-                              (tls-port "16555")))
-                    (service cups-service-type
-                             (cups-configuration
-                               (web-interface? #t)
-                               (extensions
-                                 (list cups-filters))))
-                    (service nix-service-type)
-                    (bluetooth-service #:auto-enable? #t)
-                       %my-desktop-services))
+    (services (cons* (service mate-desktop-service-type)
+               (service tlp-service-type
+                        (tlp-configuration
+                         (cpu-boost-on-ac? #t)
+                         (wifi-pwr-on-bat? #t)))
+               (pam-limits-service ;; This enables JACK to enter realtime mode
+                (list
+                 (pam-limits-entry "@realtime" 'both 'rtprio 99)
+                 (pam-limits-entry "@realtime" 'both 'memlock 'unlimited)))
+               (extra-special-file "/usr/bin/env"
+                                   (file-append coreutils "/bin/env"))
+               (service thermald-service-type)
+               (service docker-service-type)
+               (service libvirt-service-type
+                        (libvirt-configuration
+                         (unix-sock-group "libvirt")
+                         (tls-port "16555")))
+               (service cups-service-type
+                        (cups-configuration
+                         (web-interface? #t)
+                         (extensions
+                          (list cups-filters))))
+               (service nix-service-type)
+               (bluetooth-service #:auto-enable? #t)
+               %my-desktop-services))
 
     ;; Allow resolution of '.local' host names with mDNS
     (name-service-switch %mdns-host-lookup-nss)))
