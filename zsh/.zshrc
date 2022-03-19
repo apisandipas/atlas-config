@@ -44,7 +44,7 @@ setopt share_history          # share command history data
 # load z-jump script
 #eval "$(zoxide init zsh)"
 
-colortest
+~/.bin/colortest
 # colorscript -r
 
 export PATH="$HOME/.bin/:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
