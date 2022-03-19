@@ -1,75 +1,75 @@
 #!/usr/bin/env zsh
 
-#
-# Set Colors
-#
+# #
+# # Set Colors
+# #
 
-bold=$(tput bold)
-underline=$(tput sgr 0 1)
-reset=$(tput sgr0)
+# bold=$(tput bold)
+# underline=$(tput sgr 0 1)
+# reset=$(tput sgr0)
 
-purple=$(tput setaf 171)
-red=$(tput setaf 1)
-green=$(tput setaf 76)
-teal=$(tput setaf 33)
-blue=$(tput setaf 38)
+# purple=$(tput setaf 171)
+# red=$(tput setaf 1)
+# green=$(tput setaf 76)
+# teal=$(tput setaf 33)
+# blue=$(tput setaf 38)
 
-#
-# Headers and  Logging
-#
+# #
+# # Headers and  Logging
+# #
 
-e_header() {
-  printf "\n${bold}${purple}==========  %s  ==========${reset}\n" "$@"
-}
-e_header_success() {
-  printf "\n${bold}${green}==========  %s  ==========${reset}\n" "$@"
-}
-e_arrow() {
-  printf "➜ $@\n"
-}
-e_success() {
-  printf "${green}✔ %s${reset}\n" "$@"
-}
-e_error() {
-  printf "${red}✖ %s${reset}\n" "$@"
-}
-e_warning() {
-  printf "${teal}➜ %s${reset}\n" "$@"
-}
-e_underline() {
-  printf "${underline}${bold}%s${reset}\n" "$@"
-}
-e_bold() {
-  printf "${bold}%s${reset}\n" "$@"
-}
-e_note() {
-  printf "${underline}${bold}${blue}Note:${reset}  ${blue}%s${reset}\n" "$@"
-}
+# e_header() {
+#   printf "\n${bold}${purple}==========  %s  ==========${reset}\n" "$@"
+# }
+# e_header_success() {
+#   printf "\n${bold}${green}==========  %s  ==========${reset}\n" "$@"
+# }
+# e_arrow() {
+#   printf "➜ $@\n"
+# }
+# e_success() {
+#   printf "${green}✔ %s${reset}\n" "$@"
+# }
+# e_error() {
+#   printf "${red}✖ %s${reset}\n" "$@"
+# }
+# e_warning() {
+#   printf "${teal}➜ %s${reset}\n" "$@"
+# }
+# e_underline() {
+#   printf "${underline}${bold}%s${reset}\n" "$@"
+# }
+# e_bold() {
+#   printf "${bold}%s${reset}\n" "$@"
+# }
+# e_note() {
+#   printf "${underline}${bold}${blue}Note:${reset}  ${blue}%s${reset}\n" "$@"
+# }
 
-#
-# USAGE FOR SEEKING CONFIRMATION
-# seek_confirmation "Ask a question"
-# Credt: https://github.com/kevva/dotfiles
-#
-# if is_confirmed; then
-#   some action
-# else
-#   some other action
-# fi
-#
+# #
+# # USAGE FOR SEEKING CONFIRMATION
+# # seek_confirmation "Ask a question"
+# # Credt: https://github.com/kevva/dotfiles
+# #
+# # if is_confirmed; then
+# #   some action
+# # else
+# #   some other action
+# # fi
+# #
 
-seek_confirmation() {
-  printf "\n${bold}$@${reset}"
-  read -p " (y/n) " -n 1
-  printf "\n"
-}
+# seek_confirmation() {
+#   printf "\n${bold}$@${reset}"
+#   read -p " (y/n) " -n 1
+#   printf "\n"
+# }
 
-# underlined
-seek_confirmation_head() {
-  printf "\n${underline}${bold}$@${reset}"
-  read -p "${underline}${bold} (y/n)${reset} " -n 1
-  printf "\n"
-}
+# # underlined
+# seek_confirmation_head() {
+#   printf "\n${underline}${bold}$@${reset}"
+#   read -p "${underline}${bold} (y/n)${reset} " -n 1
+#   printf "\n"
+# }
 
 # Test whether the result of an 'ask' is a confirmation
 is_confirmed() {
@@ -199,4 +199,3 @@ function zsh_add_completion() {
 	completion_file="$(basename "${completion_file_path}")"
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
-
