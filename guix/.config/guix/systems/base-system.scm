@@ -135,12 +135,8 @@ EndSection
     ;; Install bare-minimum system packages
     (packages (append (list
                         git
-                        ntfs-3g
-                        exfat-utils
-                        fuse-exfat
                         stow
                         vim
-                        emacs
                         qutebrowser
                         xterm
                         bluez

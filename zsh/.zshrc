@@ -45,9 +45,11 @@ setopt share_history          # share command history data
 #eval "$(starship init zsh)"
 
 # load z-jump script
-#eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"
 
 ~/.bin/colortest
 # colorscript -r
 
 export PATH="$HOME/.bin/:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+
