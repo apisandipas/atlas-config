@@ -10,7 +10,8 @@
 ;; General sane defaults
 
 ;;; Code:
-
+(setq user-full-name "Bryan Paronto"
+      user-mail-address "bryan@cablcar.digital")
 
 ; Revert Dired and other buffers
 (customize-set-variable 'global-auto-revert-non-file-buffers t)

@@ -1,0 +1,35 @@
+;;; bp-windows.el -*- lexical-binding: t; -*-
+
+;; Copyright (C) 2022
+;; SPDX-License-Identifier: MIT
+
+;; Author: System Crafters Community
+
+;; Commentary
+
+;; Windows text configuration.
+
+;;; Code:
+
+
+(bp/leader-keys
+  ;; Window Bindings
+  "w" '(:ignore t :which-key "windows")
+  "wh" '(windmove-left :which-key "move-left")
+  "wl" '(windmove-right :which-key "move-right")
+  "wj" '(windmove-down :which-key "move-down")
+  "wk" '(windmove-left :which-key "move-up")
+  "wc" '(evil-window-delete :which-key "close-window")
+  "wd" '(evil-window-delete :which-key "delete-window")
+  "wv" '(evil-window-split :which-key "split-window-horizonal")
+  "wh" '(evil-window-vsplit :which-key "split-window-vertical")
+
+  ;; Buffer Bindings
+  "b" '(:ignore t :which-key "buffers")
+  "bk" '(kill-this-buffer :which-key "kill-buffer")
+  )
+  
+
+(provide 'bp-windows)
+;;; bp-windows.el ends here
+

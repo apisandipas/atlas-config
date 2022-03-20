@@ -11,6 +11,13 @@
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
+
+(defun bp/edit-config-file ()
+    "Function to open the config file"
+    (interactive)
+    (message "'Edit Config' not yet implemented"))
+
+
 (use-package general
   :after evil
   :config
@@ -21,11 +28,12 @@
 
   (bp/leader-keys
     "t"  '(:ignore t :which-key "toggles")
+    "te" '(treemacs :which-key "toggle file explorer")
     "tt" '(counsel-load-theme :which-key "choose theme")
-    "fde" '(lambda ()
-             (interactive)
-             ;;(find-file (expand-file-name "~/.config/emacs/Emacs.org"))
-             (message "Open config function not yet implemented"))))
+    "f"  '(:ignore t :which-key "files")
+    "fc" '(bp/edit-config-file :which-key "edit config")))
+
+
 
 ;;; Code:
 (use-package undo-tree

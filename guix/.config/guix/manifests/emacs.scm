@@ -5,6 +5,8 @@
    
    ;; Keep it tight
    "emacs-no-littering"
+   "emacs-ws-butler"
+
 
    ;; Pkg mgr / configurator
    "emacs-use-package"
@@ -29,7 +31,12 @@
    "emacs-evil-collection"
    "emacs-undo-tree"
    "emacs-general"
+   "emacs-evil-nerd-commenter"
    
+   ;; File Explorer
+   "emacs-treemacs"
+  
+   ;; Misc
    "emacs-vterm"
 
    ))

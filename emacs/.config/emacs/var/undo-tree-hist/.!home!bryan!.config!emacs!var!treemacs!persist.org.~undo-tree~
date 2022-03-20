@@ -1,0 +1,45 @@
+(undo-tree-save-format-version . 1)
+"ab598e4676fddfbdc0889fa097357abba629f06f"
+[nil nil nil nil (25143 28522 469989 850000) 0 nil]
+([nil nil ((1 . 73) (t . -1)) nil (25143 28522 469985 596000) 0 nil])
+([nil nil ((1 . 73) (#("* Default
+** modules
+ - path :: ~/.dotfiles/emacs/.config/emacs/modules
+" 0 72 (fontified nil)) . 1) (t 25143 28522 477048 232000)) nil (25143 28901 832905 556000) 0 nil])
+([nil nil ((1 . 73) (#("* Default
+** modules
+ - path :: ~/.dotfiles/emacs/.config/emacs/modules
+" 0 72 (fontified nil)) . 1) (t 25143 28901 831560 13000)) nil (25143 29346 390329 859000) 0 nil])
+([nil nil ((1 . 73) (#("* Default
+** modules
+ - path :: ~/.dotfiles/emacs/.config/emacs/modules
+" 0 72 (fontified nil)) . 1) (t 25143 29346 391257 950000)) nil (25143 29427 767050 541000) 0 nil])
+([nil nil ((1 . 73) (#("* Default
+** modules
+ - path :: ~/.dotfiles/emacs/.config/emacs/modules
+" 0 72 (fontified nil)) . 1) (t 25143 29427 767605 814000)) nil (25143 29514 813113 490000) 0 nil])
+([nil nil ((1 . 103) (#("* Default
+** modules
+ - path :: ~/.dotfiles/emacs/.config/emacs/modules
+" 0 72 (fontified nil)) . 1) (t 25143 29514 811698 338000)) nil (25143 29542 61255 473000) 0 nil])
+([nil nil ((1 . 41) (#("* Default
+** modules
+ - path :: ~/.dotfiles/emacs/.config/emacs/modules
+** .cache
+ - path :: ~/.cache
+" 0 102 (fontified nil)) . 1) (t 25143 29542 62474 844000)) nil (25143 29548 288373 131000) 0 nil])
+([nil nil ((1 . 93) (#("* Default
+** .cache
+ - path :: ~/.cache
+" 0 40 (fontified nil)) . 1) (t 25143 29548 290195 216000)) nil (25143 29560 523078 439000) 0 nil])
+([nil nil ((1 . 63) (#("* Default
+** .cache
+ - path :: ~/.cache
+** emacs
+ - path :: ~/.dotfiles/emacs/.config/emacs
+" 0 92 (fontified nil)) . 1) (t 25143 29560 525645 832000)) nil (25143 29565 858728 245000) 0 nil])
+([nil current ((1 . 63) (#("* Default
+** emacs
+ - path :: ~/.dotfiles/emacs/.config/emacs
+" 0 62 (fontified nil)) . 1) (t 25143 29565 861406 242000)) nil (25143 29605 861580 784000) 0 nil])
+nil

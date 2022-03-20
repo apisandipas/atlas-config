@@ -6,6 +6,18 @@
             (message "Emacs loaded in %s."
                      (emacs-init-time))))
 
+;; Don't pollute working directories
+(defvar user-temporary-file-directory
+  (concat temporary-file-directory user-login-name "/"))
+(make-directory user-temporary-file-directory t)
+(setq backup-by-copying t)
+(setq backup-directory-alist
+      `(("." . ,user-temporary-file-directory)
+        (,tramp-file-name-regexp nil)))
+(setq auto-save-list-file-prefix
+      (concat user-temporary-file-directory ".auto-saves-"))
+(setq auto-save-file-name-transforms
+      `((".*" ,user-temporary-file-directory t)))
 
 ;; Load All Guix-sources packages
 (guix-emacs-autoload-packages)
@@ -48,3 +60,7 @@
 ;;-----------------------------
 ;; Completion
 (require 'bp-completion)
+
+;;-----------------------------
+;; Editing
+(require 'bp-editing)
