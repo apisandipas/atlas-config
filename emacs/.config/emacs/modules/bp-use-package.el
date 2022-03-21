@@ -29,9 +29,12 @@
 
 (require 'use-package)
 
-;; Don't (!!!) download packages auto-magically.
-;; We wanna use the Guix-sources packages
-(setq use-package-always-ensure nil)
+(when (string= (system-name) "atlas")
+  ;; We wanna use the Guix-sourced packages on Atlas
+  (setq use-package-always-ensure nil)
+  ;; Everywhere else, let the magic happen.
+  (setq use-package-always-ensure t))
+
 ;;----------------------------------
 
 (provide 'bp-use-package)
