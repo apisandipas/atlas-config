@@ -11,6 +11,9 @@
 
 ;;; Code:
 
+;; Make ESC quit prompts
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
 (defun bp/window-maximize-horizontally ()
   "Delete all windows to the left and right of the current window."
   (interactive)
@@ -30,10 +33,10 @@
 (bp/leader-keys
   ;; Window Bindings
   "w" '(:ignore t :which-key "windows")
-  "wh" '(windmove-left :which-key "move-left")
-  "wl" '(windmove-right :which-key "move-right")
-  "wj" '(windmove-down :which-key "move-down")
-  "wk" '(windmove-left :which-key "move-up")
+  "wh" '(windmove-left :which-key "evil-move-left")
+  "wl" '(windmove-right :which-key "evil-move-right")
+  "wj" '(windmove-down :which-key "evil-move-down")
+  "wk" '(windmove-left :which-key "evil-move-up")
   
   "wH" '(evil-window-move-far-left :which-key "move-window-left")
   "wL" '(evil-window-move-far-right :which-key "move-window-right")
@@ -47,8 +50,8 @@
   "wd" '(evil-window-delete :which-key "delete-window")
   
   ;; window splitting
-  "wv" '(evil-window-split :which-key "split-window-horizonal")
-  "wh" '(evil-window-vsplit :which-key "split-window-vertical")
+  "ws" '(evil-window-split :which-key "split-window-horizonal")
+  "wv" '(evil-window-vsplit :which-key "split-window-vertical")
   
   ;; window change redo/undo
   "wu" '(winner-undo :which-key "undo last window change")
@@ -70,13 +73,9 @@
   "bk" '(kill-this-buffer :which-key "kill-buffer")
   "bd" '(kill-this-buffer :which-key "delete-buffer")
   "bs" '(save-buffer :which-key "save-buffer")
-  "be" '(eval-buffer :which-key "eval-buffer")
-
-  )
+  "be" '(eval-buffer :which-key "eval-buffer"))
 
   
-  
-
-(provide 'bp-windows)
+(provide 'bp-window)
 ;;; bp-windows.el ends here
 

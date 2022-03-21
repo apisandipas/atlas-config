@@ -34,7 +34,7 @@
 
 ;; Do not saves duplicates in kill-ring
 (customize-set-variable 'kill-do-not-save-duplicates t)
-
+
 ;; Make scrolling less stuttered
 (setq auto-window-vscroll nil)
 (customize-set-variable 'fast-but-imprecise-scrolling t)
@@ -53,13 +53,18 @@
 ;; Enable savehist-mode for an command history
 (savehist-mode 1)
 
-(use-package no-littering)
+(use-package no-littering
+  :config
+  ;; no-littering doesn't set this by default so we must place
+  ;; auto save files in the same path as it uses for sessions
+  (setq auto-save-file-name-transforms
+        `((".*" ,(no-littering-expand-var-file-name "auto-save/") t))))
 
-;; no-littering doesn't set this by default so we must place
-;; auto save files in the same path as it uses for sessions
-(setq auto-save-file-name-transforms
-      `((".*" ,(no-littering-expand-var-file-name "auto-save/") t)))
 
+(use-package diminish
+  :config
+  (diminish 'evil-collection-unimpaired-mode)
+  (diminish 'eldoc-mode))
 
 (provide 'bp-defaults)
 ;;; bp-defaults.el ends here

@@ -6,6 +6,7 @@
    ;; Keep it tight
    "emacs-no-littering"
    "emacs-ws-butler"
+   "emacs-diminish"
 
 
    ;; Pkg mgr / configurator
@@ -36,7 +37,7 @@
    ;; File Explorer
    "emacs-treemacs"
   
-   ;; Misc
-   "emacs-vterm"
+    ;; Misc
+    "emacs-vterm"
 
    ))

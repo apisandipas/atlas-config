@@ -11,7 +11,38 @@
 
 ;;; Code:
 
+;; (define-key evil-normal-state-map (kbd "s") 'basic-save-buffer)
+
+;; Standard indentation behaviors
+(setq standard-indent 2)
+
+(defun bp/shift-region (distance)
+  (let ((mark (mark)))
+    (save-excursion
+      (indent-rigidly (region-beginning) (region-end) distance)
+      (push-mark mark t t)
+      ;; Tell the command loop not to deactivate the mark
+      ;; for transient mark mode
+      (setq deactivate-mark nil))))
+
+(defun bp/shift-right ()
+  (interactive)
+  (bp/shift-region 1))
+
+(defun bp/shift-left ()
+  (interactive)
+  (bp/shift-region -1))
+
+
+(define-key evil-visual-state-map (kbd ">") 'bp/shift-right)
+(define-key evil-visual-state-map (kbd "<") 'bp/shift-left)
+(define-key evil-visual-state-map [tab] 'bp/shift-right)
+(define-key evil-visual-state-map [S-tab] 'bp/shift-left)
+
+
+
 (use-package ws-butler
+  :diminish
   :hook ((text-mode . ws-butler-mode)
          (prod-mode . ws-butler-mode)))
 
@@ -32,3 +63,5 @@
 
 (provide 'bp-editing)
 ;;; bp-editing.el ends here
+
+

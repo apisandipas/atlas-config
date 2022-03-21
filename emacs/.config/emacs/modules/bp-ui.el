@@ -17,9 +17,9 @@
 
 ;;; Fonts
 (add-to-list 'default-frame-alist '(font . "Victor Mono" ))
-(set-face-attribute 'default nil :font "Victor Mono" :height 100)
-(set-face-attribute 'fixed-pitch nil :font "Victor Mono" :height 100)
-(set-face-attribute 'variable-pitch nil :font "DejaVu Sans" :height 100 :weight 'regular)
+(set-face-attribute 'default nil :font "Victor Mono" :height 130)
+(set-face-attribute 'fixed-pitch nil :font "Victor Mono" :height 130)
+(set-face-attribute 'variable-pitch nil :font "DejaVu Sans" :height 130 :weight 'regular)
 
 ;; Open frame in maximized mode.
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
@@ -31,7 +31,7 @@
   :init
   ;; Start up the modeline after initialization is finished
   (add-hook 'after-init-hook 'doom-modeline-init)
-  (customize-set-variable 'doom-modeline-height 15)
+  (customize-set-variable 'doom-modeline-height 32)
   (customize-set-variable 'doom-modeline-bar-width 6)
   (customize-set-variable 'doom-modeline-minor-modes t)
   (customize-set-variable 'doom-modeline-buffer-file-name-style 'truncate-except-project)
@@ -62,6 +62,21 @@
 	     (advice-add 'helpful-update :after #'elisp-demos-advice-helpful-update))
 
 ;;;; TODO Line Numbers
+
+
+
+(column-number-mode)
+(global-display-line-numbers-mode t)
+(setq display-line-numbers-type 'relative)
+
+;; Disable line numbers for some modes
+(dolist (mode '(org-mode-hook
+                term-mode-hook
+                shell-mode-hook
+                treemacs-mode-hook
+                eshell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
 
 ;;; Help Me Obi-wan Which-Key. You're my only hope.
 (use-package which-key

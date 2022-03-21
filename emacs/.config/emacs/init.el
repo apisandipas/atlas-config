@@ -64,3 +64,13 @@
 ;;-----------------------------
 ;; Editing
 (require 'bp-editing)
+
+
+;;-----------------------------
+;; Window / Buffer Settings
+(require 'bp-window)
+
+
+;;-----------------------------
+;; Log Mode (disabled by default)
+(require 'command-log-mode)

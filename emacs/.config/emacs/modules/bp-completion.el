@@ -38,6 +38,7 @@
   (ivy-rich-mode 1))
 
 (use-package counsel
+  :diminish
   :bind (("C-M-j" . 'counsel-switch-buffer)
          :map minibuffer-local-map
          ("C-r" . 'counsel-minibuffer-history))
