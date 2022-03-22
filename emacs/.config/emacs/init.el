@@ -1,4 +1,4 @@
-;;; init.el -*- lexical-binding: t; -*-
+ ;;; init.el -*- lexical-binding: t; -*-
 
 ;; Profile emacs startup
 (add-hook 'emacs-startup-hook
@@ -19,17 +19,23 @@
 (setq auto-save-file-name-transforms
       `((".*" ,user-temporary-file-directory t)))
 
-;; Load All Guix-sources packages
-(guix-emacs-autoload-packages)
+;; Set default coding system
+(set-default-coding-systems 'utf-8)
+
+(customize-set-variable 'visible-bell 1)  ; turn off beeps, make them flash!
+
+(customize-set-variable 'large-file-warning-threshold 100000000) ;; change to ~100 MB
 
 ;; Add the modules folder to the load path
 (add-to-list 'load-path (expand-file-name "modules/" user-emacs-directory))
 
+;----------------------------
+;; Package System Setup
+(require 'bp-use-package)
 
-;; Set default coding system (especially for Windows)
-(set-default-coding-systems 'utf-8)
-(customize-set-variable 'visible-bell 1)  ; turn off beeps, make them flash!
-(customize-set-variable 'large-file-warning-threshold 100000000) ;; change to ~100 MB
+;; Load All Guix-sources packages
+(when (string= (system-name) "atlas")
+  (guix-emacs-autoload-packages))
 
 ;; Make GC pauses faster by decreasing the threshold.
 (setq gc-cons-threshold (* 2 1000 1000))
@@ -41,11 +47,6 @@
 ;; Emacs Defaults
 (require 'bp-defaults)
 
-;----------------------------
-;; Package System Setup
-
-(require 'bp-use-package)
-
 ;;---------------------------
 ;; UI Customizations
 
@@ -56,7 +57,6 @@
 
 (require 'bp-evil)
 
-
 ;;-----------------------------
 ;; Completion
 (require 'bp-completion)
@@ -65,11 +65,13 @@
 ;; Editing
 (require 'bp-editing)
 
-
 ;;-----------------------------
 ;; Window / Buffer Settings
 (require 'bp-window)
 
+;;-----------------------------
+;; Org Mode
+(require 'bp-org)
 
 ;;-----------------------------
 ;; Log Mode (disabled by default)

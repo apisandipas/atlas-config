@@ -28,7 +28,3 @@
 (push '(menu-bar-lines . 0) default-frame-alist)
 (push '(vertical-scroll-bars) default-frame-alist)
 (push '(mouse-color . "white") default-frame-alist)
-
-(load-theme 'modus-vivendi)
-
-

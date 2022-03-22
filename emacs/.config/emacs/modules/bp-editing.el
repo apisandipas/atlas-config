@@ -39,7 +39,8 @@
 (define-key evil-visual-state-map [tab] 'bp/shift-right)
 (define-key evil-visual-state-map [S-tab] 'bp/shift-left)
 
-
+(use-package format-all
+  :hook (prog-mode . format-all-mode))
 
 (use-package ws-butler
   :diminish

@@ -37,22 +37,22 @@
   "wl" '(windmove-right :which-key "evil-move-right")
   "wj" '(windmove-down :which-key "evil-move-down")
   "wk" '(windmove-left :which-key "evil-move-up")
-  
+
   "wH" '(evil-window-move-far-left :which-key "move-window-left")
   "wL" '(evil-window-move-far-right :which-key "move-window-right")
   "wJ" '(evil-window-move-very-bottom :which-key "move-window-down")
   "wK" '(evil-window-move-very-top :which-key "move-window-up")
-  
+
   ;;Window resizing
   "wo" '(evil-window-increase-width :which-key "expand-window")
   "wo" '(evil-window-increase-width :which-key "expand-window")
   "wc" '(evil-window-delete :which-key "close-window")
   "wd" '(evil-window-delete :which-key "delete-window")
-  
+
   ;; window splitting
   "ws" '(evil-window-split :which-key "split-window-horizonal")
   "wv" '(evil-window-vsplit :which-key "split-window-vertical")
-  
+
   ;; window change redo/undo
   "wu" '(winner-undo :which-key "undo last window change")
   "wU" '(winner-redo :which-key "redo last window change")
@@ -73,9 +73,10 @@
   "bk" '(kill-this-buffer :which-key "kill-buffer")
   "bd" '(kill-this-buffer :which-key "delete-buffer")
   "bs" '(save-buffer :which-key "save-buffer")
-  "be" '(eval-buffer :which-key "eval-buffer"))
+  "be" '(eval-buffer :which-key "eval-buffer")
+  "bw" '(ivy-switch-buffer-other-window :which-key "switch-buffer")
+  "bc" '(clone-indirect-buffer-other-window :which-key "cloneivy-switch-buffer-other-window-buffer"))
 
-  
+
 (provide 'bp-window)
 ;;; bp-windows.el ends here
-

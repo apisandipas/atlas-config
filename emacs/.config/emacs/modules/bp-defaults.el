@@ -34,7 +34,9 @@
 
 ;; Do not saves duplicates in kill-ring
 (customize-set-variable 'kill-do-not-save-duplicates t)
-
+
+(setq use-dialog-box nil)
+
 ;; Make scrolling less stuttered
 (setq auto-window-vscroll nil)
 (customize-set-variable 'fast-but-imprecise-scrolling t)
@@ -59,6 +61,12 @@
   ;; auto save files in the same path as it uses for sessions
   (setq auto-save-file-name-transforms
         `((".*" ,(no-littering-expand-var-file-name "auto-save/") t))))
+
+;; Reloate eln-cache folder
+(when (boundp 'native-comp-eln-load-path)
+  (setcar native-comp-eln-load-path
+          (expand-file-name (convert-standard-filename ".local/temp/cache/eln-cache/")
+                            user-emacs-directory)))
 
 
 (use-package diminish

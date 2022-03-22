@@ -1,4 +1,6 @@
 elpa
 etc
 var
-
+transient
+eln-cache
+*~undo-tree~

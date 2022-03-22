@@ -30,7 +30,18 @@
          ("C-k" . ivy-previous-line)
          ("C-d" . ivy-reverse-i-search-kill))
   :config
+  (require 'flx)
   (ivy-mode 1))
+
+(use-package ivy-prescient
+  :after ivy
+  :config
+  (ivy-prescient-mode 1))
+
+(use-package ivy-posframe
+  :after ivy
+  :config
+  (ivy-posframe-mode 1))
 
 (use-package ivy-rich
   :after ivy

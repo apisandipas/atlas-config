@@ -13,7 +13,9 @@
 
 
 (use-package all-the-icons)
-(use-package doom-themes)
+(use-package doom-themes
+  :config
+  (load-theme 'doom-one t))
 
 ;;; Fonts
 (add-to-list 'default-frame-alist '(font . "Victor Mono" ))
@@ -24,6 +26,8 @@
 ;; Open frame in maximized mode.
 (set-frame-parameter (selected-frame) 'fullscreen 'maximized)
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(set-frame-parameter (selected-frame)'alpha '(85 . 80))
+(set-frame-parameter (selected-frame)'internal-border-width 24)
 
 
 ;;;; Modeline
@@ -33,24 +37,26 @@
   (add-hook 'after-init-hook 'doom-modeline-init)
   (customize-set-variable 'doom-modeline-height 32)
   (customize-set-variable 'doom-modeline-bar-width 6)
-  (customize-set-variable 'doom-modeline-minor-modes t)
+  (customize-set-variable 'doom-modeline-minor-modes nil)
+  (customize-set-variable 'doom-modeline-buffer-file-name-style 'truncate-except-project)
+  ;; (custom-set-faces
+  ;;  '(font-lock-comment-face :slant italic)
+  ;;  '(font-lock-keyword-face :slant italic))
   (customize-set-variable 'doom-modeline-buffer-file-name-style 'truncate-except-project)
   :hook (after-init . doom-modeline-mode))
-
-
 
 ;;;; Help Buffers
 
 ;; Make `describe-*' screens more helpful
 (use-package helpful
-	     :config
-(define-key helpful-mode-map [remap revert-buffer] #'helpful-update)
-(global-set-key [remap describe-command] #'helpful-command)
-(global-set-key [remap describe-function] #'helpful-callable)
-(global-set-key [remap describe-key] #'helpful-key)
-(global-set-key [remap describe-symbol] #'helpful-symbol)
-(global-set-key [remap describe-variable] #'helpful-variable)
-(global-set-key (kbd "C-h F") #'helpful-function))
+  :config
+  (define-key helpful-mode-map [remap revert-buffer] #'helpful-update)
+  (global-set-key [remap describe-command] #'helpful-command)
+  (global-set-key [remap describe-function] #'helpful-callable)
+  (global-set-key [remap describe-key] #'helpful-key)
+  (global-set-key [remap describe-symbol] #'helpful-symbol)
+  (global-set-key [remap describe-variable] #'helpful-variable)
+  (global-set-key (kbd "C-h F") #'helpful-function))
 
 
 ;; Bind extra `describe-*' commands
@@ -58,13 +64,13 @@
 
 ;; also add some examples
 (use-package elisp-demos
-	     :config
-	     (advice-add 'helpful-update :after #'elisp-demos-advice-helpful-update))
+  :config
+  (advice-add 'helpful-update :after #'elisp-demos-advice-helpful-update))
 
 ;;;; TODO Line Numbers
 
 
-
+(setq fill-column 120)
 (column-number-mode)
 (global-display-line-numbers-mode t)
 (setq display-line-numbers-type 'relative)
@@ -95,7 +101,7 @@
   ;;(add-hook! 'doom-before-reload-hook
   ;;(defun doom-reset-which-key-replacements-h ()
   ;;(setq which-key-replacement-alist (get 'which-key-replacement-alist 'initial-value))))
-  
+
   ;; general improvements to which-key readability
   (which-key-setup-side-window-bottom)
   ;;(setq-hook! 'which-key-init-buffer-hook line-spacing 3)
