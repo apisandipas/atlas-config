@@ -1,17 +1,18 @@
-;; bp-use-package.el -*- lexical-binding: t; -*-
+;; bp-use-package.el --- config for pkg mgmt -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022
 ;; SPDX-License-Identifier: MIT
 
 ;; Author: Bryan Paronto
 
-;; Commentary
+;;; Commentary:
 
 ;; Built-in `package.el' with `use-package' configuration, including
 ;; elpas to search.
 
-;;; Code:
+;;; TODO: Implement straight.el + use-package for that extra goodness.
 
+;;; Code:
 
 ;; Initialize package sources
 (require 'package)
@@ -38,4 +39,4 @@
 ;;----------------------------------
 
 (provide 'bp-use-package)
-;;; bp -use-package.el ends here
+;;; bp-use-package.el ends here

@@ -1,4 +1,11 @@
- ;;; init.el -*- lexical-binding: t; -*-
+;;; init.el --- the entry point
+;;; -*- lexical-binding: t; -*-
+
+;;; Commentary:
+
+;; You know the drill by now
+
+;;; Code:
 
 ;; Profile emacs startup
 (add-hook 'emacs-startup-hook
@@ -29,6 +36,12 @@
 ;; Add the modules folder to the load path
 (add-to-list 'load-path (expand-file-name "modules/" user-emacs-directory))
 
+;; Make GC pauses faster by decreasing the threshold.
+(setq gc-cons-threshold (* 2 1000 1000))
+
+(customize-set-variable 'custom-file
+                        (expand-file-name "custom.el" user-emacs-directory))
+
 ;----------------------------
 ;; Package System Setup
 (require 'bp-use-package)
@@ -36,12 +49,6 @@
 ;; Load All Guix-sources packages
 (when (string= (system-name) "atlas")
   (guix-emacs-autoload-packages))
-
-;; Make GC pauses faster by decreasing the threshold.
-(setq gc-cons-threshold (* 2 1000 1000))
-
-(customize-set-variable 'custom-file
-                        (expand-file-name "custom.el" user-emacs-directory))
 
 ;;---------------------------
 ;; Emacs Defaults
@@ -76,3 +83,6 @@
 ;;-----------------------------
 ;; Log Mode (disabled by default)
 (require 'command-log-mode)
+
+(provide 'init)
+;;; init.el ends here

@@ -1,11 +1,11 @@
-;;; bp-ui.el -*- lexical-binding: t; -*-
+;;; bp-ui.el --- UI Configs -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022
 ;; SPDX-License-Identifier: MIT
 
 ;; Author: Bryan Paronto
 
-;; Commentary
+;;; Commentary:
 
 ;; User interface customizations..
 

@@ -1,11 +1,12 @@
-;;; bp-explorer.el -*- lexical-binding: t; -*-
+;;; bp-explorer.el  --- File explorer setup
+;;; -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022
 ;; SPDX-License-Identifier: MIT
 
 ;; Author: System Crafters Community
 
-;; Commentary
+;;; Commentary:
 
 ;; Explorer text configuration.
 

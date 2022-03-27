@@ -1,11 +1,11 @@
-;;; bp-windows.el -*- lexical-binding: t; -*-
+;;; bp-window.el -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022
 ;; SPDX-License-Identifier: MIT
 
 ;; Author: System Crafters Community
 
-;; Commentary
+;;; Commentary:
 
 ;; Windows / Buffer mgmt configuration.
 
@@ -79,4 +79,4 @@
 
 
 (provide 'bp-window)
-;;; bp-windows.el ends here
+;;; bp-window.el ends here

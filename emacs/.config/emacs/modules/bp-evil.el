@@ -1,11 +1,11 @@
-;;; bp-evil.el -*- lexical-binding: t; -*-
+;;; bp-evil.el --- Lets be EVIL -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022
 ;; SPDX-License-Identifier: MIT
 
-;; Author: Bryan Paronto 
+;; Author: Bryan Paronto
 
-;; Commentary
+;;; Commentary:
 
 ;; Evil mode configuration, for those who prefer `vi' keybindings.
 ;; Make ESC quit prompts

@@ -1,11 +1,12 @@
-;;; bp-editing.el -*- lexical-binding: t; -*-
+;;; bp-editing.el --- Settings for editing code, etc
+;;; -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022
 ;; SPDX-License-Identifier: MIT
 
-;; Author: System Crafters Community
+;; Author: Bryan Paronto
 
-;; Commentary
+;;; Commentary
 
 ;; Editing text configuration.
 

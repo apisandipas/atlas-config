@@ -1,11 +1,11 @@
-;; bp-defaults.el -*- lexical-binding: t; -*-
+;; bp-defaults.el --- Setup for a better overal experience -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022
 ;; SPDX-License-Identifier: MIT
 
 ;; Author: Bryan Paronto
 
-;; Commentary
+;;; Commentary:
 
 ;; General sane defaults
 

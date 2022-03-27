@@ -1,11 +1,11 @@
-;;; bp-org.el -*- lexical-binding: t; -*-
+;;; bp-org.el --- org-mode setup -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2022
 ;; SPDX-License-Identifier: MIT
 
 ;; Author: Bryan Paronto
 
-;; Commentary
+;;; Commentary:
 
 ;; Org Mode settings & customizations
 
@@ -28,7 +28,7 @@
 
 ;;;;; Ligatures & Pretty Symbols
 (defun bp/org-prettify-symbols ()
-  "Beautify Org Checkbox Symbol"
+  "Beautify Org Checkbox Symbol."
   (setq prettify-symbols-alist
         (mapcan (lambda (x) (list x (cons (upcase (car x)) (cdr x))))
                 '(

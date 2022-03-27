@@ -5,12 +5,14 @@
 
 ;; Author: Bryan Paronto
 
-;; Commentary
+;;; Commentary:
 
 ;; Setup completion packages. Completion in this sense is more like
 ;; narrowing, allowing the user to find matches based on minimal
 ;; inputs and "complete" the commands, variables, etc from the
 ;; narrowed list of possible choices.
+
+;;; TODO: Replace ivy and fields with veritco and friends
 
 ;;; Code:
 
