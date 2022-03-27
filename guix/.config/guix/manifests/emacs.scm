@@ -1,13 +1,12 @@
 (specifications->manifest
  '(
-   ;; the man, the legend
+   ;; Emacs: the next batch
    "emacs-next-pgtk-latest"
    
    ;; Keep it tight
    "emacs-no-littering"
    "emacs-ws-butler"
    "emacs-diminish"
-
 
    ;; Pkg mgr / configurator
    "emacs-use-package"
