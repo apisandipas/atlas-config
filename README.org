@@ -4,26 +4,26 @@
 
 This is my dotfiles for my Lisp-hacking machine. Based on the GNU Guix Linux Distribution / Package Manager.
 
-|-------------------+-----------+--------------|
-| Need:             | Solution: | Language:    |
-|-------------------+-----------+--------------|
-| OS                | GNU Guix  | Guile Scheme |
-| Package Mgmt      | GNU Guix  | Guile Scheme |
-| Window Manager    | EXWM      | Emacs Lisp   |
-| Window Manager 2  | StumpWM   | Common Lisp  |
-| Window Manager 3  | bspwm     | Bash / ipc   |
-| Text Editor       | Emacs     | Emacs Lisp   |
-| Web Browser       | Nyxt      | Common Lisp  |
-|-------------------+-----------+--------------|
-| Config Mgmt       | GNU Stow  | -            |
-| Terminal Emulator | Kitty     | -            |
-| Compositor        | picom     | -            |
-| Top Panel         | polybar   | -            |
-| App Launcher      | rofi      | -            |
-| Hot Key Daemon    | sxhkd     | -            |
-| Wallpaper Setter  | feh       |              |
-|-------------------+-----------+--------------|
-|                   |           |              |
+|-------------------+-----------+--------------+-------------|
+| Need:             | Solution: | Language:    | Status      |
+|-------------------+-----------+--------------+-------------|
+| OS                | GNU Guix  | Guile Scheme | done        |
+| Package Mgmt      | GNU Guix  | Guile Scheme | done        |
+| Window Manager    | EXWM      | Emacs Lisp   |             |
+| Window Manager 2  | StumpWM   | Common Lisp  |             |
+| Window Manager 3  | bspwm     | Bash / ipc   |             |
+| Text Editor       | Emacs     | Emacs Lisp   | in-progress |
+| Web Browser       | Nyxt      | Common Lisp  | in-progress |
+|-------------------+-----------+--------------+-------------|
+| Config Mgmt       | GNU Stow  | -            |             |
+| Terminal Emulator | Kitty     | -            |             |
+| Compositor        | picom     | -            |             |
+| Top Panel         | polybar   | -            |             |
+| App Launcher      | rofi      | -            |             |
+| Hot Key Daemon    | sxhkd     | -            |             |
+| Wallpaper Setter  | feh       |              |             |
+|-------------------+-----------+--------------+-------------|
+|                   |           |              |             |
 
 * Outstanding Tasks
 - install =chemacs= - for multiple emacs configurations
@@ -33,7 +33,7 @@ This is my dotfiles for my Lisp-hacking machine. Based on the GNU Guix Linux Dis
 
 
 * Guix TODOs
-- Copy system configuration to .config/guix/systems/
-    - Configure =bspwm=, =sxhkd=, =i3= in system config
-- Generate Guix Home configuration
-- Add Profile mgmt scripts to .bin
+- [ ] Copy system configuration to .config/guix/systems/
+    - [ ] Configure =bspwm=, =sxhkd=, =i3= in system config
+- [ ] Generate Guix Home configuration
+- [x] Add Profile mgmt scripts to .bin
