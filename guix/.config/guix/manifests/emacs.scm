@@ -20,6 +20,7 @@
    ;; Completion
    "emacs-ivy"
    "emacs-ivy-rich"
+   "emacs-ivy-posframe"
    "emacs-counsel"
 
    ;; Improved Help
@@ -38,5 +39,6 @@
   
     ;; Misc
     "emacs-vterm"
+    "emacs-format-all"
 
    ))
